@@ -1,12 +1,8 @@
-/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
 
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(28, 88%, 62%);
   --first-color-alt: hsl(28, 84%, 58%);
   --title-color: hsl(0, 0%, 95%);
@@ -16,8 +12,6 @@
   --body-color: hsl(0, 0%, 6%);
   --container-color: hsl(0, 0%, 10%);
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Montserrat", sans-serif;
   --second-font: "Dancing Script", cursive;
   --biggest-font-size: 3rem;
@@ -28,17 +22,14 @@
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
 
-  /*========== Font weight ==========*/
   --font-regular: 400;
   --font-semi-bold: 600;
   --font-bold: 700;
 
-  /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
 }
 
-/*========== Responsive typography ==========*/
 @media screen and (min-width: 1150px) {
   :root {
     --biggest-font-size: 5rem;
@@ -162,7 +153,7 @@ img {
   cursor: pointer;
 }
 
-/* Navigation for mobile devices */
+/* Navigation for Mobile Devices */
 @media screen and (max-width: 1150px) {
   .nav__menu {
     position: fixed;
@@ -218,12 +209,12 @@ img {
   left: 6rem;
 }
 
-/* Show menu */
+/* Show Menu */
 .show-menu {
   right: 0;
 }
 
-/* Add blur header */
+/* Add Blur Header */
 .blur-header::after {
   content: "";
   position: absolute;
@@ -237,7 +228,7 @@ img {
   z-index: -1;
 }
 
-/* Active link */
+/* Active Link */
 .active-link {
   color: var(--first-color);
 }
@@ -539,11 +530,6 @@ img {
   color: var(--first-color-alt);
 }
 
-.footer__content {
-  grid-template-columns: repeat(2, max-content);
-  gap: 4rem 2rem;
-}
-
 .footer__title {
   font-size: var(--h3-font-size);
   margin-bottom: 1.25rem;
@@ -586,7 +572,7 @@ img {
 
 .footer__img-2 {
   width: 70px;
-  top: 17rem;
+  top: 20rem;
   left: 9rem;
 }
 
@@ -636,7 +622,7 @@ img {
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For small devices */
+/* For Small Devices */
 @media screen and (max-width: 340px) {
   .container {
     margin-inline: 1rem;
@@ -673,7 +659,14 @@ img {
   }
 }
 
-/* For medium devices */
+@media screen and (min-width: 450px) {
+  .footer__content {
+    grid-template-columns: repeat(2, max-content);
+    gap: 4rem 3rem;
+  }
+}
+
+/* For Medium Devices */
 @media screen and (min-width: 576px) {
   .nav__menu {
     width: 50%;
@@ -694,6 +687,9 @@ img {
 
   .footer__content {
     grid-template-columns: repeat(3, max-content);
+  }
+  .footer__img-2 {
+    top: 16rem;
   }
 }
 
@@ -740,7 +736,7 @@ img {
   }
 }
 
-/* For large devices */
+/* For Large Devices */
 @media screen and (min-width: 1150px) {
   .container {
     margin-inline: auto;
